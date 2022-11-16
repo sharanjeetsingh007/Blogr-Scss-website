@@ -1,0 +1,90 @@
+.design {
+  text-align: center;
+  overflow-x: hidden;
+
+  .container {
+    padding-top: 10rem;
+  }
+  .row {
+    display: flex;
+    @include breakpoint-up(large) {
+      flex-direction: row-reverse;
+    }
+  }
+  h2 {
+    font-weight: bold;
+  }
+  .col__left {
+    // width: 100vw;
+    position: relative;
+    min-width: 100%;
+    min-height: 400px;
+    @include breakpoint-up(large) {
+      flex: 0.2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      //   border: 1px solid green;
+      background: url("/images/illustration-editor-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+    }
+    @include breakpoint-up(large) {
+      position: relative;
+      min-width: 40%;
+      min-height: 40rem;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -50%;
+        text-align: left;
+        // min-width: 100%;
+        // min-height: 100%;
+        // border: 1px solid green;
+        background: url("/images/illustration-editor-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+      }
+    }
+  }
+
+  .col__right {
+    // border: 1px solid rebeccapurple;
+
+    @include breakpoint-up(large) {
+      text-align: left;
+      flex: 0.8;
+    }
+    h2 {
+      //   color: $veryDarkBlue;
+      //   letter-spacing: 1.4px;
+      //   margin-top: 2rem;
+      //   margin-bottom: 2rem;
+      //   font-weight: 400;
+
+      @include breakpoint-up(large) {
+        text-align: left;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      //   color: $veryDarkGrayishBlue;
+      //   font-size: 0.9rem;
+      //   font-weight: lighter;
+      //   line-height: 1.75rem;
+      @include breakpoint-up(large) {
+        text-align: left;
+      }
+    }
+  }
+}

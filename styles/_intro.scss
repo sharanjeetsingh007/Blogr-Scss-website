@@ -1,0 +1,31 @@
+.intro {
+  //   display: block;
+  //   min-height: 31rem;
+  text-align: center;
+  p {
+    padding: 1.725rem;
+    color: $white;
+    font-weight: lighter;
+  }
+  .intro__button {
+    padding-top: 1.625rem;
+  }
+
+  h1 {
+    font-size: 1.8875rem;
+    color: $white;
+    letter-spacing: 1.6px;
+    padding-top: 0rem;
+    @include breakpoint-up(large) {
+      font-size: 3.5875rem;
+    }
+  }
+
+  .intro__button {
+    text-align: center;
+    button {
+      margin-right: 1rem;
+      margin-top: 0.4rem;
+    }
+  }
+}

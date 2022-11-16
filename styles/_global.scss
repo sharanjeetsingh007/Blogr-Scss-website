@@ -1,0 +1,247 @@
+// Utility classes
+
+.flex {
+  display: flex;
+
+  &-allCenter {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-ac-jb {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-dc {
+    flex-direction: column;
+  }
+}
+
+.container {
+  //   border: 1px solid black;
+  max-width: 72.25rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+
+  &-pall {
+    padding: 3rem;
+  }
+
+  &-psection {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+button {
+  border: none;
+}
+
+.btn__light {
+  padding: 0.6rem 2rem;
+  background: transparent;
+  color: $white;
+  border-radius: 6rem;
+  font-size: 0.9rem;
+  border: 2px solid $white;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    color: $veryLightRed;
+    background-color: $white;
+  }
+}
+
+.btn__light--mobile {
+  padding: 0.6rem 2rem;
+  background: transparent;
+  color: $lightRed;
+  border-radius: 6rem;
+  font-size: 0.9rem;
+  border: 2px solid $white;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    color: $veryLightRed;
+    background-color: $white;
+  }
+}
+
+.btn__light--header {
+  padding: 0.6rem 2rem;
+  background: transparent;
+  color: $white;
+  border-radius: 6rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    color: $veryLightRed;
+    background-color: $white;
+  }
+}
+
+.btn__dark {
+  padding: 0.6rem 2rem;
+  border-radius: 6rem;
+  background: $white;
+  //   background: linear-gradient(to right, $veryLightRed, $lightRed);
+  color: $lightRed;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 2px solid $white;
+  &:hover {
+    background: hsl(355, 100%, 78%);
+    cursor: pointer;
+    color: $white;
+  }
+}
+
+.btn__dark--mobile {
+  padding: 0.6rem 2rem;
+  border-radius: 6rem;
+  background: $white;
+  background: linear-gradient(to right, $veryLightRed, $lightRed);
+  color: $white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 2px solid $white;
+  &:hover {
+    background: hsl(355, 100%, 78%);
+    cursor: pointer;
+    color: $white;
+  }
+}
+
+.btn__dark--header {
+  padding: 0.6rem 2rem;
+  border-radius: 6rem;
+  background: $white;
+  //   background: linear-gradient(to right, $veryLightRed, $lightRed);
+  color: $lightRed;
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  &:hover {
+    background: hsl(355, 100%, 78%);
+    cursor: pointer;
+    color: $white;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  font-family: "Overpass", sans-serif;
+  overflow-x: hidden;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: $veryDarkBlue;
+  letter-spacing: 1.4px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+p {
+  color: $veryDarkGrayishBlue;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  line-height: 1.75rem;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  //   color: $white;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
