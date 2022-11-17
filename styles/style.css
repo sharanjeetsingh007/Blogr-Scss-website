@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 .flex {
   display: flex;
 }
@@ -577,16 +581,17 @@ header .subnav__inactive a:first-child::after {
 }
 .section4 .col__left {
   position: relative;
-  min-width: 120%;
+  min-width: 100%;
   min-height: 25rem;
 }
 .section4 .col__left::before {
   content: "";
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 150%;
   top: 0px;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   background: url("/images/illustration-laptop-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -603,8 +608,8 @@ header .subnav__inactive a:first-child::after {
     content: "";
     position: absolute;
     height: 120%;
-    width: 160%;
-    top: 0px;
+    width: 150%;
+    top: 0;
     left: 0;
     background: url("/images/illustration-laptop-desktop.svg");
     background-repeat: no-repeat;
@@ -619,8 +624,8 @@ header .subnav__inactive a:first-child::after {
   }
   .section4 .col__left::before {
     position: absolute;
-    left: -270px;
-    top: -50px;
+    left: -20rem;
+    top: -5em;
   }
 }
 .section4 .col__right {
