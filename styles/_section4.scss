@@ -34,7 +34,7 @@
         content: "";
         position: absolute;
         height: 120%;
-        width: 150%;
+        width: 140%;
         top: 0;
         left: 0;
         background: url("/images/illustration-laptop-desktop.svg");
@@ -48,8 +48,9 @@
       min-height: 40rem;
       &::before {
         position: absolute;
-        left: -20rem;
+        left: -14rem;
         top: -05em;
+        transform: translate(0);
       }
     }
   }

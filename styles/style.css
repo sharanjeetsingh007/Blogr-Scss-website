@@ -608,7 +608,7 @@ header .subnav__inactive a:first-child::after {
     content: "";
     position: absolute;
     height: 120%;
-    width: 150%;
+    width: 140%;
     top: 0;
     left: 0;
     background: url("/images/illustration-laptop-desktop.svg");
@@ -624,8 +624,9 @@ header .subnav__inactive a:first-child::after {
   }
   .section4 .col__left::before {
     position: absolute;
-    left: -20rem;
+    left: -14rem;
     top: -5em;
+    transform: translate(0);
   }
 }
 .section4 .col__right {
